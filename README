@@ -1,0 +1,15 @@
+MINIX compilation and package build steps
+
+## To compile for the first time
+./build.sh -mi386 -O ../obj.i386 -U release
+
+## Run an incremental compilation
+./build.sh -u -mi386 -O ../obj.i386 -U release
+
+## Run compile for arm architecture
+./build.sh -u -mevbearm-el -O ../obj.evbearm -U release
+
+## create iso cdrom image for installation
+export CREATE_IMAGE_ONLY=1
+./releasetools/x86_cdimage.sh
+./releasetools/x86_hdimage.sh

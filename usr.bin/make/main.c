@@ -192,6 +192,7 @@ char *makeDependfile;
 pid_t myPid;
 int makelevel;
 
+FILE *debug_file;
 Boolean forceJobs = FALSE;
 
 extern Lst parseIncPath;
